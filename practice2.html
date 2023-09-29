@@ -1,0 +1,85 @@
+
+   <!-- suppose there is a container with a btn and when i clicked on this btn then it changes the whole appearences and make appear a differernt page on  same daimension  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            min-height: 100vh;
+
+        }
+        .container{
+            margin: 0 auto;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(to left bottom ,lightblue,rgb(214, 106, 106),lightgreen);
+        }
+        .btn{
+            background-color: brown;
+             margin-top: 200px;
+             margin-left: 180px;
+             height: 50px;
+             border-radius: 50%;
+            
+        }
+        .para{
+            padding-top: 50px;
+            padding-left: 80px;
+        }
+        .btn:hover{
+            transition: all 0.7s ease;
+            transform: scale(1.2);
+            background-color: cadetblue;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+      <div class="container">
+
+        <p class="para">hello guys , just click on the btn and see the magic</p>
+        <button class="btn">see magic(click me)</button>
+      </div>
+
+
+  <script>
+    const btnEl=document.querySelector('.btn')
+    const paraEl=document.querySelector('.para')
+    const containerEl=document.querySelector('.container')
+    
+
+    btnEl.addEventListener('click', () =>{
+        containerEl.innerHTML=`
+        <strong>hello you are now appear in 
+         a new tab thankyou .
+used by a speaker to refer to himself or herself as the object of a verb or preposition when he or she is the subject of the clause.
+"I hurt myself by accident"
+2.
+I or me personally (used to emphasize the speaker).
+"I myself am unsure how this problem should be handled" `
+         
+    });
+  </script>
+
+
+</body>
+</html>
+
+
+<!--  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

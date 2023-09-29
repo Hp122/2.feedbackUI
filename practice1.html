@@ -1,0 +1,100 @@
+
+ <!-- if we click on one item then its hover effect becomes static  until i refresh the page  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box{
+        width: 50px;                
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 50%;
+        background-color: rgb(20, 228, 93);
+    }
+    #box:hover,
+    #box.active{
+        background-color: brown;
+        
+        
+    }
+    
+</style>
+<body>
+    <div id="box"> 
+
+    </div>
+    <hr>
+    
+    <script>
+        const boxEl=document.getElementById('box')
+        boxEl.addEventListener('click',(event)=>{
+            event.target.classList.add('active')
+        });
+    </script>
+
+</body>
+</html>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------- -->
+   <!-- if we have multiple items then how to static hover effect 
+    and when i clicked on other one then all hover effect shift on the otherone from the initial one -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: chartreuse;
+        }
+        .circle:hover,
+        .circle.active{
+        background-color:red;
+        }
+        </style>
+
+
+</head>
+<body><div class="container1">
+     <div class="circle" id="box1"></div><br>
+     <div class="circle" id="box2"></div><br>
+     <div class="circle" id="box3"></div><br>
+    </div>
+     
+<script>
+    const circleEl=document.querySelectorAll('.circle')
+  
+  
+    circleEl.forEach((circleEl) => {
+    circleEl.addEventListener("click", (event) => {
+        removeActive();
+  
+    event.target.classList.add("active");          
+  });
+            
+        });
+
+        function removeActive() {
+  circleEl.forEach((circleEl) => {
+    circleEl.classList.remove("active");
+  });
+}
+    
+</script>
+</body>
+</html>
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
